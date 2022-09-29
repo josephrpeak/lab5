@@ -5,10 +5,15 @@
 ## Name: Joseph Peak
 ## Email: jrp3yp@umsystem.edu
 ##
-## PROBLEM : Describe the problem
+## PROBLEM : Lab5 -- Simulate a library card-checking system for a university.
 ##                      
 ## ALGORITHM : 
-##      1. Write out the algorithm
+##      1. Get library card input
+##      2. Check library card length, first 5 digits, last 3 digits, and check digit
+##      3. If library card is invalid
+##              print error messages to user
+##          else
+##              print student grade and department
 ## 
 ## ERROR HANDLING:
 ##      Any Special Error handling to be noted.  Wager not less than 0. etc
