@@ -76,7 +76,7 @@ def find_bad_character(library_card, alpha_or_digit):
     elif(alpha_or_digit == 2):
         for i in range(len(library_card)):
             if(library_card[i].isdigit() == False):
-                return [i, library_card[i]]
+                return [i+7, library_card[i]]
 
 
 def verify_check_digit(library_card):
@@ -88,10 +88,10 @@ def verify_check_digit(library_card):
         passed = False
     elif((library_card[0:5]).isalpha() == False):
         passed = False
-        error = f"The first 5 characters must be A-Z, the invalid character is at {find_bad_character(library_card, 1)[0]} is {find_bad_character(library_card, 1)[1]}"
+        error = f"The first 5 characters must be A-Z, the invalid character is at {find_bad_character(library_card[0:5], 1)[0]} is {find_bad_character(library_card, 1)[1]}"
     elif((library_card[7:10]).isdigit() == False):
         passed = False
-        error = f"The last 3 characters must be 0-9, the invalid character is at {find_bad_character(library_card, 2)[0]} is {find_bad_character(library_card, 2)[0]}" 
+        error = f"The last 3 characters must be 0-9, the invalid character is at {find_bad_character(library_card[7:10], 2)[0]} is {find_bad_character(library_card, 2)[1]}" 
     elif(get_school(library_card) == 'Invalid School'):
         passed = False
         error = "The sixth character must be 1 2 or 3"
