@@ -1,12 +1,12 @@
 ########################################################################
 ##
 ## CS 101 Lab
-## Program #
-## Name
-## Email
+## Program #5
+## Name: Joseph Peak
+## Email: jrp3yp@umsystem.edu
 ##
 ## PROBLEM : Describe the problem
-##
+##                      
 ## ALGORITHM : 
 ##      1. Write out the algorithm
 ## 
@@ -18,7 +18,6 @@
 ##
 ########################################################################
 # import statements
-import re
 
 # functions
 def get_school(library_card):
@@ -113,7 +112,7 @@ if __name__ == "__main__":
     if(library_card == ''):
         quit()
     else:
-        if(verify_check_digit(library_card) == False):
+        if(verify_check_digit(library_card)[0] == False):
             print("Library Card is Invalid")
             print(verify_check_digit(library_card))
         else:
